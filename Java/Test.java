@@ -16,7 +16,7 @@ public class Test{
 		System.out.println('a'+1); //这里有个自动类型转换
 		System.out.println((char)('a'+1));
 
-		System.out.println("哈哈哈哈\r" + "明天"); // \t很有意思
+		System.out.println("哈哈哈哈\r" + "明天"); // \t很有意思,是一个回车符，意思是回到行首
 
 		//数组初始化的几种方式
 		int[] arr1 = {1,3,3,4,5};
@@ -25,7 +25,7 @@ public class Test{
 
 		// System.out.println(System.currentTimeMillis()); //系统时间
 		// System.out.println("请输入一个Int型参数：");
-		// Scanner input = new Scanner(System.in); //标准输入
+		Scanner input = new Scanner(System.in); //标准输入
 		// System.out.println("刚刚输入的值为： " + input.nextInt());
 
 		System.out.println((int)(Math.random()*100)); //随机数的产生
@@ -34,6 +34,28 @@ public class Test{
 		int year=2000; 
 		boolean isLeapYear = (year%4==0 && year%100!=0) || year%400==0;
 		System.out.println(year + "是否为闰年？  ：" + isLeapYear);
+
+		char a = 'A';
+		System.out.println(++a);
+		System.out.println(a);
+
+		//Character类提供了一些字符串函数
+		System.out.println(Character.isDigit('a'));
+		System.out.println(Character.isLetter('B'));
+		System.out.println(Character.toLowerCase('T'));
+
+		String firstr = "Welcome to Java!"; //字符串的本质是字符序列
+		//String类的一些实例方法 length(),charAt(index),concat(s),toUpperCase(),toLowerCase(),trim()用于去除两端的空白字符;
+		//控制台读取字符串方法,next()方法以空白字符结束字符串，或者nextLine()读取一行，只以换行符结束
+		//String inputStr = input.next();
+		
+		//String 对象的比较方法 equals(s1),equalIgnoreCase(s1),compareTo(s1),compareToIgnoreCase(s1),startsWith(prefix),endWith(suffiex),contains(s1)
+		//获得子字符串 substring(beginIndex) 只给出开始位置
+		//            substring(beginIndex,endIndex) 截取 beginIndex~endIndex-1的字串 (hive中第二个参数是截取的长度，需要留意)
+
+
+
+
 		
 
 
