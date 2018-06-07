@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Test{
+public class JavaBasic{
 	
 	public static void main(String[] args) {
 	
@@ -53,12 +53,12 @@ public class Test{
 		//获得子字符串 substring(beginIndex) 只给出开始位置
 		//            substring(beginIndex,endIndex) 截取 beginIndex~endIndex-1的字串 (hive中第二个参数是截取的长度，需要留意)
 
-
-
-
+		//输入输出重定向 将输入得数据用空格隔开,存放在一个名为input.txt的文件中，并将System.out.println的内容打印到output.txt中
+		//java SentinelValue < input.txt>output.txt; //SentinelValue为一个包含main方法的类
 		
-
-
+		do{ 
+			int i = 1+1;
+		}while(1>2); //注意分号不能省略
 
 
 	}
