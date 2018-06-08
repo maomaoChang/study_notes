@@ -60,6 +60,23 @@ public class JavaBasic{
 			int i = 1+1;
 		}while(1>2); //注意分号不能省略
 
+		int[] array = new int[10];
+		System.out.println("数组的长度为：" +  array.length);
+
+		//数组的复制,java数组复制不能简单的list2=list1.有三种方式：1.逐个元素复制2.System类中的静态方法arraycopy3.clone方法
+		int[] arraym = {3,1,4,5,6};
+		System.arraycopy(arraym,0,array,0,arraym.length);
+
+		//可变长参数列表
+		//public static void printMax(double... numbers) //numbers是一个数组
+		
+		//java.util.Arrays类中的静态方法
+		//Arrays.sort(numbers)   Arrays.parallelSort(numbers)  Arrays.sort(numbers,1,10)数组中部分排序
+		
+		//二维数据的创建必须指定行
+		int[][] arrayd = new int[5][];
+
+
 
 	}
 
