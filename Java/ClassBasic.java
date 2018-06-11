@@ -65,6 +65,28 @@ public class ClassBasic{
 		System.out.println("String格式化：" + String.format("%x",26)); //26转成16进制数1A
 
 		//装箱与开箱
+		//BigInteger和BigDecimal 不可变对象(java.math)
+		BigInteger a = new BigInteger("882345898572378459835792");
+		BigInteger b = new BigInteger("88234535792");
+		BigInteger c = a.multiply(b);
+		BigInteger d = a.divide(b);
+
+		//String 
+		String str = new String("welcome to java");
+		char[] charArray = {'w','e','l','c','o'};
+		String newStr = new String(charArray); //通过字符数组来初始化字符串
+		//限定字符串：JVM为了节省内存, 对相同字符学列的字符串直接量使用同一个实例
+		//字符串的替换和分隔
+		System.out.println("Welcome".replace('e','A')); //WAlcomA
+		System.out.println("Welcome".replaceFirst('e','A')); //WAlcome
+		System.out.println("Welcome".replace('e','A')); //WAlcomA
+		System.out.println("Welcome".replace('el','A')); //WAcome
+		String[] token = "Java#HTLM#Perl".split("#");
+
+		//String正则匹配
+		
+		//String和数组之间的转换
+
 		 
 	}
 
