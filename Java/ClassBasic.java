@@ -45,6 +45,7 @@ public class ClassBasic{
 		//不可变对象和类,String就是一个典型的不可变类 
 		
 		/**
+		 * 
 		 * 变量的作用域
 		 * 1.实例变量和静态变量的作用域是整个类,无论变量在哪里声明
 		 * 2.局部变量在方法内部声明和创建,遵从局部变量优先法则
@@ -52,6 +53,19 @@ public class ClassBasic{
 		
 		//this引用。 1.指向调用对象本身的引用名 2.必须放在第一句
 		
+		//基本数据类型作为对象处理
+		int intValue = new Integer("5").intValue();
+		System.out.println("包装类的数值：" + intValue);
+
+		//数值类的compareTo方法
+		System.out.println(new Integer("5").compareTo(new Integer(5)));
+		Double doubleObject = Double.valueOf("12.4"); //valueOf传入String,转换成Double对象
+
+		System.out.println("转成特定进制的数：" + Integer.parseInt("11",2)); //结果位3
+		System.out.println("String格式化：" + String.format("%x",26)); //26转成16进制数1A
+
+		//装箱与开箱
+		 
 	}
 
 }
