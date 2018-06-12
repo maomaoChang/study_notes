@@ -5,6 +5,7 @@
  */
 import java.util.Date;
 import java.util.Random;
+import java.math.*;
 
 public class ClassBasic{
 	
@@ -70,6 +71,10 @@ public class ClassBasic{
 		BigInteger b = new BigInteger("88234535792");
 		BigInteger c = a.multiply(b);
 		BigInteger d = a.divide(b);
+		BigDecimal a1 = new BigDecimal("8728532652345623452345234523452345234523452373.6");
+		BigDecimal b1 = new BigDecimal("2"); //a1/b1万一无限循环，则会报异常ArithmeticException。
+		BigDecimal c1 = a1.divide(b1,20,BigDecimal.ROUND_UP);
+		System.out.println("除数的结果为：" + c1);
 
 		//String 
 		String str = new String("welcome to java");
@@ -78,14 +83,26 @@ public class ClassBasic{
 		//限定字符串：JVM为了节省内存, 对相同字符学列的字符串直接量使用同一个实例
 		//字符串的替换和分隔
 		System.out.println("Welcome".replace('e','A')); //WAlcomA
-		System.out.println("Welcome".replaceFirst('e','A')); //WAlcome
+		System.out.println("Welcome".replaceFirst("e","A")); //WAlcome
 		System.out.println("Welcome".replace('e','A')); //WAlcomA
-		System.out.println("Welcome".replace('el','A')); //WAcome
+		System.out.println("Welcome".replace("el","A")); //WAcome
 		String[] token = "Java#HTLM#Perl".split("#");
 
 		//String正则匹配
 		
 		//String和数组之间的转换
+		char[] charArray2 = "Java".toCharArray();
+		char[] dst = {'a','b','c','d','e','f','f','w','d','d','d'};
+		"CS3720".getChars(2,6,dst,4); //字串复制到目标dst处，从下标4开始
+		String str1 = String.valueOf(new char[]{'F','A','A'}); //从字符数组创建String 
+
+		//字符和数字转化为字符串String
+		String str2 = String.valueOf(89); //str2="89"
+
+		//格式化字符串
+		String str3 = String.format("%7.2f",14.56); //按照特定格式输出
+
+		//StringBuilder和StringBuffer(StringBuffer修改缓冲区的方法是同步的)
 
 		 
 	}
