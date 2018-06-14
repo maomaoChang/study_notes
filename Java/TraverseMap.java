@@ -20,7 +20,7 @@ public class TraverseMap{
 
 	}
 
-	//第一种：普遍使用, 二次取值
+	//第一种：通过key值取value值,比较慢和低效,不推荐
 	public static void method1(HashMap<String,String> map){
 		System.out.println("通过Map.keySet遍历key和value：");
 		for (String key : map.keySet()) {
@@ -29,7 +29,7 @@ public class TraverseMap{
 
 	}
 
-	//第二种：Map.entrySet()的迭代器
+	//第二种：Map.entrySet()的迭代器,它是遍历老java版本map的唯一方法
 	public static void method2(HashMap<String,String> map){
 		System.out.println("通过Map.entrySet使用iterator遍历key和value：");
 		Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();
@@ -47,6 +47,8 @@ public class TraverseMap{
 			System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
 		}
 	}
+	//这种for-each循环是Java5新引入的，所以只能在Java5以上的版本中使用。如果你遍历的map是null的话，For-Each循环会抛出
+	//NullPointerException异常，所以在遍历之前你应该判断是否为空引用
 
 	//第四种：只遍历value值
 	public static void method4(HashMap<String,String> map){
