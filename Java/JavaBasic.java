@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.IOException;
 
 public class JavaBasic{
 	
@@ -75,10 +78,20 @@ public class JavaBasic{
 		
 		//二维数据的创建必须指定行
 		int[][] arrayd = new int[5][];
-
-
-
 	}
+
+	//Java获取键盘输入的两种方式其一
+	public static String getStringKeyboard() throws IOException {  
+	    InputStreamReader isr = new InputStreamReader(System.in);  
+	    BufferedReader br = new BufferedReader(isr);  
+	    String s = br.readLine();  
+	    return s;  
+	}  
+	//Java获取键盘输入的两种方式其二
+	public static int getIntKeyboard() {  
+	    Scanner sca = new Scanner(System.in);  
+	    return sca.nextInt();  
+	}	
 
 
 
