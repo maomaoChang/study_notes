@@ -8,6 +8,12 @@
 
 4.集合类的关系、特性、底层原理(HashMap、BlockQueue)
 
+5.网络编程实例
+
+6.常见设计模式
+
+7.JVM原理
+
 
 
 二、Python相关
@@ -16,11 +22,12 @@
 三、机器学习相关
 
 
-四、Spark相关
+四、Spark相关,Hive和Hadoop相关
+
+1.HDFS、MapReduce、Yarn、Hive、Spark开源组件
+
+2.Kafka、Flume的日志采集、消息队列
 
 
-五、Hive和Hadoop相关
-
-
-六、纯算法相关
+五、纯算法相关
 
